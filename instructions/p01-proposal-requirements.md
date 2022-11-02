@@ -32,7 +32,7 @@
 ### The Dataset (2)
 
 | Name of data set: | Number of observations (rows)  | Number of variables (columns) |
-| :------------- | :------------- | |
+| :------------- | :------------- |:----------------------------------------------- |
 | Mortality rate attributed to household and ambient air pollution |    6589   |35 |
 | Household clean fuel usage data |   17764    |35 |
 | Concentrations of fine particulate matter |   9451    |35 |
