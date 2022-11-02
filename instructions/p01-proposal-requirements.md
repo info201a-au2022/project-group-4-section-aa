@@ -31,8 +31,8 @@
 
 ### The Dataset (2)
 
-| Name of data set: | Number of observations (rows)  | Number of variables (columns) |
-| :------------- | :------------- |:----------------------------------------------- |
-| Mortality rate attributed to household and ambient air pollution |    6589   |35 |
-| Household clean fuel usage data |   17764    |35 |
-| Concentrations of fine particulate matter |   9451    |35 |
+| Name of data set: | Number of observations (rows)  | Number of variables (columns) | URLs |
+| :------------- | :------------- |:----------------------------------------------- |:---- |
+| Mortality rate attributed to household and ambient air pollution |    6589   |35 | https://www.who.int/data/gho/data/indicators/indicator-details/GHO/ambient-and-household-air-pollution-attributable-death-rate-(per-100-000-population)|
+| Household clean fuel usage data |   17764    |35 |https://www.who.int/data/gho/data/themes/air-pollution/household-air-pollution |
+| Concentrations of fine particulate matter |   9451    |35 | https://www.who.int/data/gho/data/indicators/indicator-details/GHO/concentrations-of-fine-particulate-matter-(pm2-5)|
