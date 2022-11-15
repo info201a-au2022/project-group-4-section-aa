@@ -12,7 +12,7 @@ clean_fuels <- read.csv("https://raw.githubusercontent.com/info201a-au2022/proje
 new_clean_fuels <- clean_fuels %>% 
   filter(Period == "2019") %>% 
   select(ParentLocation, Location, Period, Dim1, FactValueNumeric) %>% 
-  rename(Region = ParentLocation, Countries = Location, Year = Period, Areas = Dim1, Rates = FactValueNumeric)
+  rename(Region = ParentLocation, Countries = Location, Year = Period, Areas = Dim1, clean_fuels_rate = FactValueNumeric)
 
 ## 2019 clean fuels reliance rates on average for each region
 avg_reliance_region <- new_clean_fuels %>% 
@@ -28,7 +28,7 @@ avg_reliance_countries <- new_clean_fuels %>%
 # mortality data values primarily use 
 new_mortaity <- mortality %>% 
   select(ParentLocation, Location, Period, Dim1, Dim2, FactValueNumeric) %>% 
-  rename(Region = ParentLocation, Countries = Location, Year = Period, Sexual = Dim1, Causes = Dim2,Rates = FactValueNumeric)
+  rename(Region = ParentLocation, Countries = Location, Year = Period, Sexual = Dim1, Causes = Dim2,mortality_rate = FactValueNumeric)
 
 ## mortality rates on average for each region
 avg_mortality_region <- new_mortaity %>% 
@@ -44,7 +44,7 @@ avg_mortality_countries <- new_mortaity %>%
 # Concentrations particulate matter data values primarily use
 new_concentrations_particulate_matter <- concentrations_particulate_matter %>% 
   select(ParentLocation, Location, Period, Dim1, FactValueNumeric) %>% 
-  rename(Region = ParentLocation, Countries = Location, Year = Period, Areas = Dim1, Rates = FactValueNumeric)
+  rename(Region = ParentLocation, Countries = Location, Year = Period, Areas = Dim1, concentration_rate = FactValueNumeric)
 
 ## Concentrations particulate matter on average for each region
 avg_concentrations_region <- new_concentrations_particulate_matter %>% 
@@ -63,7 +63,7 @@ summary_values_region <- left_join(avg_concentrations_region,
   mutate(avg_reliance_rate = avg_reliance_region$avg_clean_fuels_rate)
 
 ## output as an table
-kable(summary_values_region)
+regions_table <- kable(summary_values_region)
 
 ## summary of all three average rate for countries
 summary_values_countries <- left_join(avg_reliance_countries, 
@@ -72,4 +72,4 @@ summary_values_countries <- left_join(avg_reliance_countries,
   left_join(avg_mortality_countries, by = "Countries")
 
 ## output as an table
-kable(summary_values_countries)
+countires_table <- kable(summary_values_countries)
