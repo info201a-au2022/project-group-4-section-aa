@@ -11,12 +11,14 @@ knitr::opts_chunk$set(warning = FALSE, echo = TRUE)
 
 ## What is this file for?
 
-* This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
+-   This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
 
-* Please see Canvas for more details.
+-   Please see Canvas for more details.
 
 ## ACCESSING THE /source DIRECTORY
+
 ### Example 1: Source some code and run a function
+
 ```{r}
 # Example 1: Note relative path, which can be read: Up one
 # directory(..), down into source (/source), and 
@@ -26,14 +28,15 @@ data_access_test()
 ```
 
 ### Example 2: Initialize a variable and then use it
+
 ```{r}
 # Example 1: This function was "sourced" above
 msg <- data_access_test(" Morgan!")
 ```
 
-> `r msg` Hope you have a good day!! 
+> `r msg` Hope you have a good day!!
 
-## ABOUT THIS FILE: 
+## ABOUT THIS FILE:
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -43,17 +46,17 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
-
 ## Household Clean Fuel Reliance by Region
+
 ```{r echo = FALSE}
 source("../source/Chart1.R")
 clean_fuels_plot
 ```
 
-This chart shows the average percentage reliance on clean fuel sources in households across different world regions in the form of a bar chart. Of course, this is limited by the number of countries that WHO has this information on. From this chart, we can see that clean fuels are most prevalent in households in Europe and the Americas (which includes Caribbean countries). This prevalence is much decreased in Africa, which only has about a 25% average reliance.  Using this in conjunction with the following map can help viewers compare the regions with worst air particle concentration with their use of clean fuels.
-
+This chart shows the average percentage reliance on clean fuel sources in households across different world regions in the form of a bar chart. Of course, this is limited by the number of countries that WHO has this information on. From this chart, we can see that clean fuels are most prevalent in households in Europe and the Americas (which includes Caribbean countries). This prevalence is much decreased in Africa, which only has about a 25% average reliance. Using this in conjunction with the following map can help viewers compare the regions with worst air particle concentration with their use of clean fuels.
 
 ## PM2.5 Concentrations Worldwide
+
 ```{r echo = FALSE}
 source("../source/Chart2.R")
 concentration_map
@@ -62,9 +65,19 @@ concentration_map
 This map visually illustrates the concentration of certain particulates in ambient air around the world. The more red a country is, the higher the concentration, ie. the more air pollution they suffer. From the visualization, it is clear that Asia, the Middle East, and North Africa have many countries with high particulate levels. It's interesting when comparing this to the previous chart, that Africa and Southeast Asia have low clean fuel reliance on average, whereas the Eastern Mediterranean region sees more clean fuel usage. There may be a correlation in the first two regions between low clean fuel reliance and poor air quality, but there is likely a different reason for the air pollution in Eastern Mediterranean.
 
 ## Reliance on Clean Fuels and Air Pollution-Related Deaths
+
 ```{r echo = FALSE}
 source("../source/Chart3.R")
 reliance_death_plot
 ```
 
-This scatterplot shows each country's average reliance on clean household fuels and the death rate per 100,000 due to air-pollution related causes. The use of a trend line helps show how strong of a relationship there is between these two variables. There seems to be little relationship between the two when the clean fuel usage is between around 0 and 70%. After this point, the line begins to curve down, indicating a negative relationship between the two; as reliance on clean fuels increases, the deaths related to air pollution decrease. 
+This scatterplot shows each country's average reliance on clean household fuels and the death rate per 100,000 due to air-pollution related causes. The use of a trend line helps show how strong of a relationship there is between these two variables. There seems to be little relationship between the two when the clean fuel usage is between around 0 and 70%. After this point, the line begins to curve down, indicating a negative relationship between the two; as reliance on clean fuels increases, the deaths related to air pollution decrease.
+
+## Dynamic Conclusion
+
+```{r setup, include=FALSE}
+source("../source/Summary_Info.R")
+knitr::opts_chunk$set(echo=TRUE)
+```
+
+With data collected from our data sets we were able to implement 3 different visual perspectives of our main proposal whether there is a relationship between countries; and communities household usage of unclean fuels and air pollution, as well as rates of mortality related to such pollution. This data allowed us to put everything into perspective. For example with chart 1, we were able to determine that the highest percentage of household clean fuels run by region was `summary_info$Region_most_reliance`. Pollution has many hazardous that cn cause mortality. In chart 2 it was found that the region with the most mortality is `summary_info$Region_most_mortality`, with a mean of `summary_info$avg_mortality_2019`.Concentrations of an area are an important factor when looking at air quality, and mortality of an area. In chart 3 we were able to determine that the region with the highest concentration was `summary_info$Region_highest_concentrations`.
