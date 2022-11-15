@@ -17,12 +17,12 @@ new_clean_fuels <- clean_fuels %>%
 ## 2019 clean fuels reliance rates on average for each region
 avg_reliance_region <- new_clean_fuels %>% 
   group_by(Region) %>% 
-  summarise(avg_clean_fuels_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_clean_fuels_rate = mean(clean_fuels_rate, na.rm = TRUE, round(2)))
 
 ## 2019 clean fuels reliance rates on average for each countries
 avg_reliance_countries <- new_clean_fuels %>% 
   group_by(Countries) %>% 
-  summarise(avg_clean_fuels_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_clean_fuels_rate = mean(clean_fuels_rate, na.rm = TRUE, round(2)))
 
 
 # mortality data values primarily use 
@@ -33,12 +33,12 @@ new_mortaity <- mortality %>%
 ## mortality rates on average for each region
 avg_mortality_region <- new_mortaity %>% 
   group_by(Region) %>% 
-  summarise(avg_mortality_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_mortality_rate = mean(mortality_rate, na.rm = TRUE, round(2)))
 
 ## mortality rates on average for each countries
 avg_mortality_countries <- new_mortaity %>% 
   group_by(Countries) %>% 
-  summarise(avg_mortality_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_mortality_rate = mean(mortality_rate, na.rm = TRUE, round(2)))
 
 
 # Concentrations particulate matter data values primarily use
@@ -49,12 +49,12 @@ new_concentrations_particulate_matter <- concentrations_particulate_matter %>%
 ## Concentrations particulate matter on average for each region
 avg_concentrations_region <- new_concentrations_particulate_matter %>% 
   group_by(Region) %>% 
-  summarise(avg_concentration_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_concentration_rate = mean(concentration_rate, na.rm = TRUE, round(2)))
 
 ## Concentrations particulate matter on average for each countries
 avg_Concentrations_countries <- new_concentrations_particulate_matter %>% 
   group_by(Countries) %>% 
-  summarise(avg_concentration_rate = mean(Rates, na.rm = TRUE, round(2)))
+  summarise(avg_concentration_rate = mean(concentration_rate, na.rm = TRUE, round(2)))
 
 ## summary of all three average rate for regions
 summary_values_region <- left_join(avg_concentrations_region, 
