@@ -1,6 +1,7 @@
 library(tidyverse)
 library(stringr)
 library(ggplot2)
+library(maps)
 
 concentrations_particulate_matter <- read.csv("https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-aa/main/data/Concentrations%20of%20fine%20particulate%20matter.csv")
 

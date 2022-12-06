@@ -126,7 +126,7 @@ output$scatterplotly <- renderPlotly({
   ) %>% 
     layout(
       title = paste0("Household Reliance on Clean Fuels and Prevalence of ",input$illness_choice),
-      xaxis = list(title = "Reliance (%)"),
+      xaxis = list(title = "Household Reliance on Clean Fuels (%)"),
       yaxis = list(title = paste0("Death Rate Attributable to ",input$illness_choice," per 100,000"))
     )
 })
