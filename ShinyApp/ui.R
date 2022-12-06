@@ -34,12 +34,12 @@ map_control <- sidebarPanel(
               label = "Please select urban-rural",
               choices = unique(world_shape$Dim1),
               selected = "Rural"),
-  img(src = "https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-aa/main/source/patient.png", width = 350, length = 300)
+  img(src = "https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-aa/main/source/patient.png", width = 355, length = 300)
 )
 
 
 map_panel <- tabPanel(
-  "Levels of PM2.5",
+  "World Levels of Pollution",
   sidebarLayout(
     map_control,
     map_content
@@ -49,8 +49,13 @@ map_panel <- tabPanel(
 
 # ----------------- Page 3 Scatter Plot ---------------
 scatter_content <- mainPanel(
-  h5("Clean Fuel Usage in Households and Prevalence of Certain Illness"),
-  plotlyOutput("scatterplotly")
+  plotlyOutput("scatterplotly"),
+  h4(strong("Scatterplot Analysis:")),
+  p("From this interactive chart, we can see that overall, there does not seem to be a strong correlation between household clean fuel usage 
+  and the frequency of air-pollution related deaths. However, it is interesting to note that some of the highest frequencies of death from 
+  these causes occur in places with an average reliance on clean fuels of less than 80%. When considering the different specific types of illnesses, 
+  it again appears that there is no clear correlation, except in the case of lower respiratory infections. With these infections, it appears that 
+  there is a higher frequency of death with lower clean fuel reliance.")
 )
 
 scatter_control <- sidebarPanel(
@@ -61,7 +66,7 @@ scatter_control <- sidebarPanel(
 )
 
 scatter_panel <- tabPanel(
-  "Illness",
+  "Pollution-Related Illness",
   sidebarLayout(
     scatter_content,
     scatter_control
@@ -71,8 +76,12 @@ scatter_panel <- tabPanel(
 
 # ----------------- Page 4 Bar Plot ---------------
 bar_content <- mainPanel(
-  h5("Clean Fuel Usage in Rural vs. Urban Areas"),
-  plotlyOutput("barplotly")
+  plotlyOutput("barplotly"),
+  h4(strong("Bar Chart Analysis:")),
+  p("Here we can see that clean fuel reliance is on average higher in urban areas than rural areas in every region of the world. 
+  Urban areas of these regions tend to have a clean fuel reliance percentage of over 70%, but there is an exception in Africa, 
+  which shows one of around 36%, and a much lower reliance in rural areas, of only about 14%.")
+  
 )
 
 bar_control <- sidebarPanel(
