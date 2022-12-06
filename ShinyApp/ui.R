@@ -49,7 +49,6 @@ map_panel <- tabPanel(
 
 # ----------------- Page 3 Scatter Plot ---------------
 scatter_content <- mainPanel(
-  h5("Clean Fuel Usage in Households and Prevalence of Certain Illness"),
   plotlyOutput("scatterplotly"),
   h4(strong("Scatterplot Analysis:")),
   p("From this interactive chart, we can see that overall, there does not seem to be a strong correlation between household clean fuel usage 
@@ -77,7 +76,6 @@ scatter_panel <- tabPanel(
 
 # ----------------- Page 4 Bar Plot ---------------
 bar_content <- mainPanel(
-  h5("Clean Fuel Usage in Rural vs. Urban Areas"),
   plotlyOutput("barplotly"),
   h4(strong("Bar Chart Analysis:")),
   p("Here we can see that clean fuel reliance is on average higher in urban areas than rural areas in every region of the world. 
