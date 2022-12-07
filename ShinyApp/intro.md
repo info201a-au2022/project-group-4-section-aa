@@ -1,0 +1,12 @@
+> ### ***Introduction***
+Air is necessary to life, but it is something that many of us do not give much thought to here in Seattle, where we enjoy good air quality. However, many people around the world do not have that luxury. We wanted to consider one of the possible factors that can contribute to air pollution and its effects worldwide: fuel usage. Specifically, in this project, we used WHO data to explore the relationship between clean fuel usage in homes around the world and the effects of air pollution. We use data to determine which of the world regions suffer from the worst air pollution, the relationship between the use of unclean fuels in households, illnesses that are caused from air pollution, and if there is a pattern for usage of unclean fuels in certain areas.
+
+> #### ***The main questions we want to tackle with this app are:***
+> #### ***Question 1:***  Which regions of the world suffer from the worst air pollution?
+> #### ***Question 2:*** Is there a relationship between the use of unclean fuels in households and certain illnesses?
+> #### ***Question 3:*** Is there a prevalence for the use of unclean fuels in specific kinds of areas (ie. rural vs urban)?
+
+> ### ***Dataset:***
+All three data were collected from the World Health Organization (WHO)." Mortality rate attributed to household and ambient air pollution" (1) This data was collected to assess the burden of disease due to exposure to ambient (outdoor) air pollution and household (indoor) air pollution from the use of polluting fuels for cooking in different regions." Household air pollution data" (2) The main purpose of collecting this data is to compare the increase in mortality from acute lower respiratory, chronic obstructive pulmonary disease, stroke, ischemic heart disease, and lung cancer associated with household use of solid fuels and kerosene in different regions." Concentrations of fine particulate matter" (3) The main purpose of this data is to look at air pollutants in different areas, as well as other particulate matter. These particles can penetrate deep into the respiratory tract and therefore pose a health risk by increasing mortality from respiratory infections and diseases, lung cancer, and certain cardiovascular diseases. All of the above data are collected continuously every 2-3 years and are in the process of being updated.
+
+> ![Pollution](https://raw.githubusercontent.com/info201a-au2022/project-group-4-section-aa/main/source/pollution.png)

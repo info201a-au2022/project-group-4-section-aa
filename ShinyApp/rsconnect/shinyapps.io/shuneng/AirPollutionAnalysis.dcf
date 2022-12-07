@@ -1,0 +1,13 @@
+name: AirPollutionAnalysis
+title: AirPollutionAnalysis
+username:
+account: shuneng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7833673
+bundleId: 6601968
+url: https://shuneng.shinyapps.io/AirPollutionAnalysis/
+when: 1670376978.6735
+lastSyncTime: 1670376978.6735
+asMultiple: FALSE
+asStatic: FALSE

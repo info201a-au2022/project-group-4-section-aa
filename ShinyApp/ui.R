@@ -10,12 +10,13 @@
 library(shiny)
 library(plotly)
 library(shinythemes)
+library(markdown)
 
 
 # --------------Page 1 Introduction ---------------
 intro_panel <- tabPanel(
   "Introduction",
-  h5("Clean Fuel Usage, Pollution, and Illness Around the World")
+  fluidRow(includeMarkdown("intro.md"))
 )
 
 # --------------End Page 1 Introduction -----------
@@ -100,11 +101,29 @@ bar_panel <- tabPanel(
 )
 # ------------------- End Page 4 Bar plot -----------
 
+# -------------------- Page 5 summary takeaways -------
+summary_panel <- tabPanel(
+  "Summary Takeaways",
+  fluidRow(includeMarkdown("summary_takeaways.md"))
+)
+
+# -------------------- End Page 5 summary takeaways -----
+
+# -------------------- Page 6 report -------
+report_panel <- tabPanel(
+  "Report",
+  fluidRow(includeMarkdown("report_page.md"))
+)
+
+# -------------------- End Page 6 report -----
+
 ui <- navbarPage(
   theme = shinythemes::shinytheme("paper"),
   "Air Pollution Analysis",
   intro_panel,
   map_panel,
   scatter_panel,
-  bar_panel
+  bar_panel,
+  summary_panel,
+  report_panel
 )
